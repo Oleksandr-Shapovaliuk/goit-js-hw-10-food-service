@@ -3,12 +3,13 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
-const currentTheme = localStorage.getItem('theme');
 const themeSwitcherRef = document.getElementById('theme-switch-toggle');
 
 if (!currentTheme) {
   localStorage.setItem('theme', Theme.LIGHT);
 }
+
+const currentTheme = localStorage.getItem('theme');
 
 if (currentTheme === Theme.DARK) {
   themeSwitcherRef.checked = true;
