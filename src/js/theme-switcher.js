@@ -5,7 +5,7 @@ const Theme = {
 
 const themeSwitcherRef = document.getElementById('theme-switch-toggle');
 
-if (!currentTheme) {
+if (!localStorage.getItem('theme')) {
   localStorage.setItem('theme', Theme.LIGHT);
 }
 
